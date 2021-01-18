@@ -1,12 +1,35 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 import HomeScreen from './screen/Home';
 import WalletScreen from './screen/Wallet';
 import PayScreen from './screen/Pay';
 
-
+//Contruindo as tabs embaixo
 const Tab = createBottomTabNavigator();
+//Construindo os icons 
+const icons = {
+    Home: {
+        lib: AntDesign,
+        name: 'home',
+    },
+    Wallet: {
+        lib: AntDesign,
+        name: 'creditcard',
+    },
+    Pay: {
+        lib: AntDesign,
+        name: 'home',
+    },
+    Notification: {
+        lib: Ionicons,
+        name: 'ios-notifications-outline',
+    },
+    Settings: {
+        lib: AntDesign,
+        name: 'setting',
+    },
+}
 export default function Navigation(){
     return (
         <Tab.Navigator>
